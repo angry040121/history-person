@@ -44,7 +44,8 @@ body{
 @keyframes fadeIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
 
 /* ============ 首页 ============ */
-#home{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:40px 0;}
+#home{min-height:100vh;padding:40px 0;}
+#home.active{display:flex;flex-direction:column;justify-content:center;}
 .hero{
   background:var(--card);
   border:1px solid var(--line);
@@ -224,7 +225,7 @@ body{
         <div class="m"><b>7</b><span>类历史人物</span></div>
         <div class="m"><b>3</b><span>分钟左右</span></div>
       </div>
-      <button class="btn" onclick="startQuiz()">开 始 测 试</button>
+      <button type="button" class="btn" onclick="startQuiz()">开 始 测 试</button>
       <p class="disclaimer">本测试仅供娱乐，不代表历史定论，也不是专业心理诊断。</p>
     </div>
   </section>
@@ -241,8 +242,8 @@ body{
       <div class="opts" id="opts"></div>
     </div>
     <div class="quiz-foot">
-      <button class="btn-back" id="btnBack" onclick="prevQ()">←</button>
-      <button class="btn" id="btnNext" onclick="nextQ()">下一题</button>
+      <button type="button" class="btn-back" id="btnBack" onclick="prevQ()">←</button>
+      <button type="button" class="btn" id="btnNext" onclick="nextQ()">下一题</button>
     </div>
   </section>
 
@@ -250,7 +251,7 @@ body{
   <section id="result" class="view">
     <div class="result-card" id="resultCard"></div>
     <div class="result-actions">
-      <button class="btn ghost" onclick="restart()">再 测 一 次</button>
+      <button type="button" class="btn ghost" onclick="restart()">再 测 一 次</button>
       <p class="share-tip">截图保存本页，分享给朋友，看看谁与你是同一位古人。</p>
     </div>
   </section>
